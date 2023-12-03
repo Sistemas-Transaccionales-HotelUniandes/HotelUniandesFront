@@ -1,20 +1,25 @@
+<button (click)="mostrar()">Requerimiento 2: CRUD Habitaciones</button>
+
+
+<div *ngIf="show">
+
 <p>Obtener una habitacion por id</p>
-<ul>
+<ul style="height: 200px; overflow-y: auto;">
   <li *ngFor="let habitacion of habitaciones">
-    {{ habitacion.id }} - {{ habitacion.tipoHabitacionId }}
+    {{ habitacion.id }}
     <button (click)="getHabitacionById(habitacion.id)">Ver Detalles</button>
+    <div *ngIf="selectedHabitacion && selectedHabitacionId === habitacion.id">
+      Tipo de Habitación ID: {{ selectedHabitacion.tipoHabitacionId }}
+    </div>
   </li>
 </ul>
-<div *ngIf="selectedHabitacion">
-  <p>ID: {{ selectedHabitacion.id }}</p>
-  <p>Tipo de Habitación ID: {{ selectedHabitacion.tipoHabitacionId }}</p>
-</div>
+
 
 <p>
   Eliminar Habitaciones
 </p>
 
-<ul>
+<ul style="height: 200px; overflow-y: auto;">
   <li *ngFor="let habitacion of habitaciones">
     {{ habitacion.id }} - {{ habitacion.tipoHabitacionId }}
     <button (click)="deleteHabitacion(habitacion.id)">Eliminar</button>
@@ -50,3 +55,5 @@
 
   <button type="submit">Actualizar Habitación</button>
 </form>
+
+</div>

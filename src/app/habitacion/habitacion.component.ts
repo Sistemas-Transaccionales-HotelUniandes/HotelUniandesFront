@@ -13,12 +13,18 @@ export class HabitacionComponent implements OnInit {
   habitacionModel = new Habitacion(0,0);
   selectedHabitacionId!: number;
   nuevoTipoHabitacionId!: number;
+  show: boolean = false;
 
   constructor(private habitacionService: HabitacionService) { }
 
   ngOnInit() {
     this.getHabitaciones();
   }
+
+  mostrar(): void {
+    this.show = !this.show;
+  }
+
   getHabitaciones(): void {
     this.habitacionService.getAllHabitaciones()
       .subscribe(habitaciones => this.habitaciones = habitaciones);
@@ -26,7 +32,10 @@ export class HabitacionComponent implements OnInit {
 
   getHabitacionById(id: number): void {
     this.habitacionService.getHabitacionById(id)
-      .subscribe(habitacion => this.selectedHabitacion = habitacion);
+      .subscribe(habitacion => {
+        this.selectedHabitacion = habitacion;
+        this.selectedHabitacionId = id;
+      });
   }
 
   deleteHabitacion(id: number): void {
