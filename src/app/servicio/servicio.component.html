@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="col-8 mx-auto mt-5 text-center">
+    <label for="opciones">Selecciona un servicio:</label>
+    <select id="opciones" [(ngModel)]="opcionSeleccionada">
+      <option *ngFor="let opcion of opciones" [value]="opcion">{{ opcion }}</option>
+    </select>
+  </div>
+
+  <div class="col-8 mx-auto mt-1 text-center">
+    <label for="id">Ingrese un ID:</label>
+    <input type="text" id="id" [(ngModel)]="idIngresado">
+  </div>
+
+  <div class="col-8 mx-auto mt-1 text-center">
+    <button class="btn btn-primary col-auto" type="button" (click)="consultar()">Consultar</button>
+  </div>
+
+</div>
+
+<div class="row">
+  <app-servicio-gimnasio *ngIf="estaConsultando && opcionSeleccionada == 'Gimnasio'" [gimnasio]="gimnasio"></app-servicio-gimnasio>
+</div>
