@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+.app-logo {
+    height: 150px; /* Tamanio*/
+    width: auto; /* Vista */
+    position: relative ;
+  }
+
+  .app-header {
+    background-color: black; /* Fondo negro */
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente (cambia a 'end' si solo se quiere alinear abajo) */
+  }
