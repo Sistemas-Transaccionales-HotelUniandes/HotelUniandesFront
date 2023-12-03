@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TipoHabitacionModule } from './tipo-habitacion/tipo-habitacion.module';
 import { HabitacionModule } from './habitacion/habitacion.module';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { HabitacionModule } from './habitacion/habitacion.module';
     BrowserModule,
     AppRoutingModule,
     TipoHabitacionModule,
-    HabitacionModule
+    HabitacionModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

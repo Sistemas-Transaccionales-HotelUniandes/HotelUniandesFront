@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class HabitacionService {
-  private apiUrl: string = environment.baseUrl + '/Habitacion';
+  private apiUrl: string = environment.baseUrl + 'Habitacion';
 
 constructor(private http: HttpClient) { }
 
@@ -24,6 +24,7 @@ deleteHabitacion(id: number): Observable<string> {
   return this.http.delete<string>(this.apiUrl + '/delete/' + id);
 }
 getAllHabitaciones(): Observable<Habitacion[]> {
+  console.log(this.apiUrl);
   return this.http.get<Habitacion[]>(this.apiUrl);
 }
 
