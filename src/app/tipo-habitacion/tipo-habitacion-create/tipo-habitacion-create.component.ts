@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { TipoHabitacionService } from '../tipo-habitacion.service';
+import { TipoHabitacion } from '../tipo-habitacion';
 
 @Component({
   selector: 'app-tipo-habitacion-create',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TipoHabitacionCreateComponent implements OnInit {
 
-  constructor() { }
+  tiposHabitaciones: Array<TipoHabitacion> = [];
+
+  constructor(private tipoHabitacionService: TipoHabitacionService) { }
+
+  getTiposHabitaciones(){
+    this.tipoHabitacionService.getTiposHabitaciones().subscribe(tiposHabitaciones => {
+      this.tiposHabitaciones = tiposHabitaciones;
+    });
+  }
 
   ngOnInit() {
+    this.getTiposHabitaciones();
   }
 
 }

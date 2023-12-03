@@ -1,3 +1,42 @@
-<p>
-  tipo-habitacion-create works!
-</p>
+<div class="row">
+  <h1 class="col-12 text-center mt-5">Gestionar tipos de habitacion</h1>
+</div>
+
+<div class="row">
+
+  <div class="col-4">
+    <h2 class="text-center">Tipos de habitaciones</h2>
+
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Tipo</th>
+          <th>Descripcion</th>
+          <th>Precio</th>
+          <th>Capacidad</th>
+        </tr>
+      </thead>
+
+      <tbody *ngFor="let tipoHabitacion of tiposHabitaciones">
+        <tr>
+          <td>{{tipoHabitacion.id}}</td>
+          <td>{{tipoHabitacion.tipo}}</td>
+          <td>{{tipoHabitacion.descripcion}}</td>
+          <td>{{tipoHabitacion.precio}}</td>
+          <td>{{tipoHabitacion.capacidad}}</td>
+        </tr>
+      </tbody>
+
+    </table>
+  </div>
+
+  <div class="col-4">
+
+  </div>
+
+  <div class="col-4">
+
+  </div>
+
+</div>

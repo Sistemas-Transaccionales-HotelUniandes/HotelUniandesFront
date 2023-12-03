@@ -4,6 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TipoHabitacionModule } from './tipo-habitacion/tipo-habitacion.module';
+import { HttpClientModule } from '@angular/common/http';
+import { TipoHabitacionService } from './tipo-habitacion/tipo-habitacion.service';
 
 @NgModule({
   declarations: [
@@ -12,9 +14,10 @@ import { TipoHabitacionModule } from './tipo-habitacion/tipo-habitacion.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    TipoHabitacionModule
+    TipoHabitacionModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [TipoHabitacionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
