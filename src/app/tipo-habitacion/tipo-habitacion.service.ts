@@ -11,8 +11,24 @@ export class TipoHabitacionService {
 
   constructor(private http: HttpClient) { }
 
+  crearTipoHabitacion(tipoHabitacionData: any): Observable<any>{
+    return this.http.post<TipoHabitacion>(this.apiUrl + "/save", tipoHabitacionData);
+  }
+
   getTiposHabitaciones(): Observable<TipoHabitacion[]>{
     return this.http.get<TipoHabitacion[]>(this.apiUrl);
+  }
+
+  getTipoHabitacion(tipo: string): Observable<TipoHabitacion>{
+    return this.http.get<TipoHabitacion>(this.apiUrl + "/get/" + tipo);
+  }
+
+  actualizarTipoHabitacion(tipoHabitacion: string, tipoHabitacionData: any): Observable<any>{
+    return this.http.put<TipoHabitacion>(this.apiUrl + "/update/" + tipoHabitacion, tipoHabitacionData);
+  }
+
+  eliminarTipoHabitacion(tipoHabitacion: string): Observable<any>{
+    return this.http.delete<TipoHabitacion>(this.apiUrl + "/delete/" + tipoHabitacion);
   }
 
 }

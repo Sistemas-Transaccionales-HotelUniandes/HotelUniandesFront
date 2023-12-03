@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { TipoHabitacionModule } from './tipo-habitacion/tipo-habitacion.module';
 import { HttpClientModule } from '@angular/common/http';
 import { TipoHabitacionService } from './tipo-habitacion/tipo-habitacion.service';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { TipoHabitacionService } from './tipo-habitacion/tipo-habitacion.service
     BrowserModule,
     AppRoutingModule,
     TipoHabitacionModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [TipoHabitacionService],
   bootstrap: [AppComponent]
