@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { TipoHabitacionService } from '../tipo-habitacion.service';
-import { TipoHabitacion } from '../tipo-habitacion';
+import { TipoHabitacionService } from './tipo-habitacion.service';
+import { TipoHabitacion } from './tipo-habitacion';
 
 @Component({
   selector: 'app-tipo-habitacion-create',
