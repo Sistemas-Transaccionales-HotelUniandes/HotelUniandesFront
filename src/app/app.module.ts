@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { TipoHabitacionModule } from './tipo-habitacion/tipo-habitacion.module';
 import { HabitacionModule } from './habitacion/habitacion.module';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { ReservaModule } from './reserva/reserva.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     TipoHabitacionModule,
     HabitacionModule,
-    HttpClientModule
+    HttpClientModule,
+    ReservaModule
   ],
   providers: [],
   bootstrap: [AppComponent]
