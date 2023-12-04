@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Reserva } from '../reserva/reserva';
 
 @Component({
   selector: 'app-estado-reserva',
@@ -8,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class EstadoReservaComponent implements OnInit {
 
   idIngresado: number = 0;
+  reserva!: Reserva;
 
   constructor() { }
 
