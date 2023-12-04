@@ -27,6 +27,13 @@ export class ServicioComponent implements OnInit {
     }
   }
 
+  crear(){
+    if( this.opcionSeleccionada == 'Gimnasio' ){
+      this.gimnasio = new Gimnasio(this.idIngresado, 0, new Date(), '', 0, 0, '', '');
+      this.estaConsultando = true
+    }
+  }
+
   ngOnInit() {
   }
 

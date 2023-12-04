@@ -16,7 +16,15 @@ constructor(private http: HttpClient) { }
     return this.http.get<any>(this.apiUrl + "/get/" + type + "/" + id);
   }
 
+  updateServicio(type: string, id: number, servicioData: any): Observable<any>{
+    return this.http.put<any>(this.apiUrl + "/update/" + type + "/" + id, servicioData);
+  }
+
+  eliminarServicio(id: number): Observable<any>{
+    return this.http.delete<any>(this.apiUrl + "/delete/" + id);
+  }
+
   crearGimnasio(servicioData: any): Observable<Gimnasio>{
-    return this.http.post<Gimnasio>(this.apiUrl + "/save", servicioData);
+    return this.http.post<Gimnasio>(this.apiUrl + "/gimnasio/save", servicioData);
   }
 }
