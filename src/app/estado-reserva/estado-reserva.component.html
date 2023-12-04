@@ -1,0 +1,12 @@
+<div class="row">
+  <div class="col-8 mx-auto mt-1 text-center">
+    <label for="id">Ingrese un ID de reserva para hacer check in:</label>
+    <input type="text" id="id" [(ngModel)]="idIngresado">
+  </div>
+
+  <div class="col-8 mx-auto mt-1 text-center">
+    <button class="btn btn-primary col-auto" type="button" (click)="realizarCheckIn()">Realizar Check-In</button>
+    <button class="btn btn-primary col-auto" type="button" (click)="realizarCheckIn()">Crear</button>
+  </div>
+
+</div>
