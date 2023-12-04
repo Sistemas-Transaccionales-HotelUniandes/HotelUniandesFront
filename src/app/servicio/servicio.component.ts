@@ -9,7 +9,7 @@ import { ServicioService } from './servicio.service';
 })
 export class ServicioComponent implements OnInit {
 
-  opciones: string[] = ['Piscina', 'Gimnasio', 'Internet', 'Producto', 'Salon', 'Spa'];
+  opciones: string[] = ['Gimnasio', 'Piscina', 'Internet', 'Producto', 'Salon', 'Spa'];
   opcionSeleccionada: string = '';
   idIngresado: number = 0;
   estaConsultando: boolean = false;
