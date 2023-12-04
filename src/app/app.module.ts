@@ -9,6 +9,7 @@ import { TipoHabitacionService } from './tipo-habitacion/tipo-habitacion.service
 import { FormsModule } from '@angular/forms';
 import { ServicioService } from './servicio/servicio.service';
 import { ServicioModule } from './servicio/servicio.module';
+import { EstadoReservaModule } from './estado-reserva/estado-reserva.module';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { ServicioModule } from './servicio/servicio.module';
     BrowserModule,
     AppRoutingModule,
     TipoHabitacionModule,
+    EstadoReservaModule,
     ServicioModule,
     HttpClientModule,
     FormsModule
