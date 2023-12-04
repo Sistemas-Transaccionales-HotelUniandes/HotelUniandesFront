@@ -17,6 +17,12 @@ export class EstadoReservaComponent implements OnInit {
   realizarCheckInOut(estado: string){
     this.reservaService.getReservaById(this.idIngresado).subscribe(reserva => {
       this.reserva = reserva;
+
+      if(this.reserva.estado == "Check Out"){
+        alert("La reserva ya se encuentra en estado Check Out");
+        window.location.reload();
+      }
+
       this.reserva.estado = estado;
       this.reservaService.updateReserva(this.idIngresado, this.reserva).subscribe(reserva => {
         this.reserva = reserva;

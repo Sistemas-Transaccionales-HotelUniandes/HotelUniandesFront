@@ -13,7 +13,7 @@ constructor(private http: HttpClient) { }
 private apiUrl: string = environment.baseUrl + 'Cuenta';
 
 registrarConsumo(id: number, servicio: number): Observable<Cuenta>{
-  return this.http.put<Cuenta>(this.apiUrl + '/update/'+id+'/agregarServicio/', servicio);
+  return this.http.put<Cuenta>(this.apiUrl + '/update/'+id+'/agregarServicio/', servicio + '');
 }
 
 

@@ -8,7 +8,6 @@
       {{ reserva.id }}
       <button (click)="getReservaById(reserva.id)">Ver Detalles</button>
       <ul *ngIf="selectedReservaId === reserva.id">
-        <li>Acompañantes: {{ selectedReserva.acompanantes }}</li>
         <li>Numero de noches: {{ selectedReserva.numNoches }}</li>
         <li>Estado: {{ selectedReserva.estado }}</li>
         <li>Id habitacion: {{ selectedReserva.habitacionReserva }}</li>
