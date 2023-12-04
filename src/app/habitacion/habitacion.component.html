@@ -8,7 +8,7 @@
   <li *ngFor="let habitacion of habitaciones">
     {{ habitacion.id }}
     <button (click)="getHabitacionById(habitacion.id)">Ver Detalles</button>
-    <div *ngIf="selectedHabitacion && selectedHabitacionId === habitacion.id">
+    <div *ngIf="selectedHabitacionId === habitacion.id">
       Tipo de Habitación ID: {{ selectedHabitacion.tipoHabitacionId }}
     </div>
   </li>

@@ -7,6 +7,7 @@ import { TipoHabitacionModule } from './tipo-habitacion/tipo-habitacion.module';
 import { HabitacionModule } from './habitacion/habitacion.module';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ReservaModule } from './reserva/reserva.module';
+import { CuentaModule } from './Cuenta/Cuenta.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ReservaModule } from './reserva/reserva.module';
     TipoHabitacionModule,
     HabitacionModule,
     HttpClientModule,
-    ReservaModule
+    ReservaModule,
+    CuentaModule
   ],
   providers: [],
   bootstrap: [AppComponent]
