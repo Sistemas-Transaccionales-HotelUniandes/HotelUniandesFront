@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Reserva } from '../reserva/reserva';
+import { ReservaService } from '../reserva/reserva.service';
 
 @Component({
   selector: 'app-estado-reserva',
@@ -11,10 +12,17 @@ export class EstadoReservaComponent implements OnInit {
   idIngresado: number = 0;
   reserva!: Reserva;
 
-  constructor() { }
+  constructor(private reservaService: ReservaService) { }
 
-  realizarCheckIn(){
-    console.log("Check In realizado con éxito");
+  realizarCheckInOut(estado: string){
+    this.reservaService.getReservaById(this.idIngresado).subscribe(reserva => {
+      this.reserva = reserva;
+      this.reserva.estado = estado;
+      this.reservaService.updateReserva(this.idIngresado, this.reserva).subscribe(reserva => {
+        this.reserva = reserva;
+        alert(estado + " realizado correctamente");
+      });
+    });
   }
 
   ngOnInit() {
