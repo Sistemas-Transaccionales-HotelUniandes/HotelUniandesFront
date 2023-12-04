@@ -8,6 +8,11 @@ import { HabitacionModule } from './habitacion/habitacion.module';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ReservaModule } from './reserva/reserva.module';
 import { CuentaModule } from './Cuenta/Cuenta.module';
+import { TipoHabitacionService } from './tipo-habitacion/tipo-habitacion.service';
+import { FormsModule } from '@angular/forms';
+import { ServicioService } from './servicio/servicio.service';
+import { ServicioModule } from './servicio/servicio.module';
+
 
 @NgModule({
   declarations: [
@@ -20,9 +25,11 @@ import { CuentaModule } from './Cuenta/Cuenta.module';
     HabitacionModule,
     HttpClientModule,
     ReservaModule,
-    CuentaModule
+    CuentaModule,
+    ServicioModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [TipoHabitacionService, ServicioService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
