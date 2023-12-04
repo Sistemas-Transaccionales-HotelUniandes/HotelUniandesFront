@@ -1,0 +1,23 @@
+<button (click)="mostrar()">Requerimiento 6: CRUD Consumos</button>
+
+<div *ngIf="show">
+
+  <p>Ahgregar Consumo en una cuenta</p>
+
+  <form (submit)="agregarConsumo()">
+    <label for="selectedIdCuenta">Seleccione Cuenta:</label>
+    <select [(ngModel)]="idCuenta" name="selectedIdCuenta">
+      <option *ngFor="let cuenta of cuentas" [value]="cuenta.id">
+        {{ cuenta.id }}
+      </option>
+    </select>
+  
+    <label for="nuevoServicio">Nuevo Consumo:</label>
+    <input type="number" [(ngModel)]="idServicio" name="nuevoServicio">
+  
+    <button type="submit">Registrar servicio en Cuenta</button>
+  </form>
+
+
+
+</div>
